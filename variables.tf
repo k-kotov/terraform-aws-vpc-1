@@ -13,7 +13,7 @@ variable "name" {
 variable "cidr" {
   description = "The CIDR block for the VPC. Default value is a valid CIDR, but not acceptable by AWS and should be overridden"
   type        = string
-  default     = "10.0.0.0/16"
+  default     = ""
 }
 
 variable "enable_ipv6" {
@@ -103,7 +103,7 @@ variable "intra_subnet_assign_ipv6_address_on_creation" {
 variable "secondary_cidr_blocks" {
   description = "List of secondary CIDR blocks to associate with the VPC to extend the IP Address pool"
   type        = list(string)
-  default     = ["10.0.0.0/16"]
+  default     = []
 }
 
 variable "instance_tenancy" {
