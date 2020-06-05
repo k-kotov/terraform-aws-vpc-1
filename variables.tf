@@ -13,7 +13,7 @@ variable "name" {
 variable "cidr" {
   description = "The CIDR block for the VPC. Default value is a valid CIDR, but not acceptable by AWS and should be overridden"
   type        = string
-  default     = "0.0.0.0/0"
+  default     = "10.0.0.0/16"
 }
 
 variable "enable_ipv6" {
@@ -103,7 +103,7 @@ variable "intra_subnet_assign_ipv6_address_on_creation" {
 variable "secondary_cidr_blocks" {
   description = "List of secondary CIDR blocks to associate with the VPC to extend the IP Address pool"
   type        = list(string)
-  default     = []
+  default     = ["10.0.0.0/16"]
 }
 
 variable "instance_tenancy" {
@@ -1693,7 +1693,7 @@ variable "default_network_acl_ingress" {
       from_port  = 0
       to_port    = 0
       protocol   = "-1"
-      cidr_block = "0.0.0.0/0"
+      cidr_block = "10.0.0.0/16"
     },
     {
       rule_no         = 101
@@ -1717,7 +1717,7 @@ variable "default_network_acl_egress" {
       from_port  = 0
       to_port    = 0
       protocol   = "-1"
-      cidr_block = "0.0.0.0/0"
+      cidr_block = "10.0.0.0/16"
     },
     {
       rule_no         = 101
@@ -1741,7 +1741,7 @@ variable "public_inbound_acl_rules" {
       from_port   = 0
       to_port     = 0
       protocol    = "-1"
-      cidr_block  = "0.0.0.0/0"
+      cidr_block  = "10.0.0.0/16"
     },
   ]
 }
@@ -1757,7 +1757,7 @@ variable "public_outbound_acl_rules" {
       from_port   = 0
       to_port     = 0
       protocol    = "-1"
-      cidr_block  = "0.0.0.0/0"
+      cidr_block  = "10.0.0.0/16"
     },
   ]
 }
@@ -1773,7 +1773,7 @@ variable "private_inbound_acl_rules" {
       from_port   = 0
       to_port     = 0
       protocol    = "-1"
-      cidr_block  = "0.0.0.0/0"
+      cidr_block  = "10.0.0.0/16"
     },
   ]
 }
@@ -1789,7 +1789,7 @@ variable "private_outbound_acl_rules" {
       from_port   = 0
       to_port     = 0
       protocol    = "-1"
-      cidr_block  = "0.0.0.0/0"
+      cidr_block  = "10.0.0.0/16""
     },
   ]
 }
@@ -1805,7 +1805,7 @@ variable "intra_inbound_acl_rules" {
       from_port   = 0
       to_port     = 0
       protocol    = "-1"
-      cidr_block  = "0.0.0.0/0"
+      cidr_block  = "10.0.0.0/16"
     },
   ]
 }
@@ -1821,7 +1821,7 @@ variable "intra_outbound_acl_rules" {
       from_port   = 0
       to_port     = 0
       protocol    = "-1"
-      cidr_block  = "0.0.0.0/0"
+      cidr_block  = "10.0.0.0/16"
     },
   ]
 }
@@ -1837,7 +1837,7 @@ variable "database_inbound_acl_rules" {
       from_port   = 0
       to_port     = 0
       protocol    = "-1"
-      cidr_block  = "0.0.0.0/0"
+      cidr_block  = "10.0.0.0/16"
     },
   ]
 }
@@ -1853,7 +1853,7 @@ variable "database_outbound_acl_rules" {
       from_port   = 0
       to_port     = 0
       protocol    = "-1"
-      cidr_block  = "0.0.0.0/0"
+      cidr_block  = "10.0.0.0/16"
     },
   ]
 }
@@ -1869,7 +1869,7 @@ variable "redshift_inbound_acl_rules" {
       from_port   = 0
       to_port     = 0
       protocol    = "-1"
-      cidr_block  = "0.0.0.0/0"
+      cidr_block  = "10.0.0.0/16"
     },
   ]
 }
@@ -1885,7 +1885,7 @@ variable "redshift_outbound_acl_rules" {
       from_port   = 0
       to_port     = 0
       protocol    = "-1"
-      cidr_block  = "0.0.0.0/0"
+      cidr_block  = "10.0.0.0/16"
     },
   ]
 }
@@ -1901,7 +1901,7 @@ variable "elasticache_inbound_acl_rules" {
       from_port   = 0
       to_port     = 0
       protocol    = "-1"
-      cidr_block  = "0.0.0.0/0"
+      cidr_block  = "10.0.0.0/16"
     },
   ]
 }
@@ -1917,7 +1917,7 @@ variable "elasticache_outbound_acl_rules" {
       from_port   = 0
       to_port     = 0
       protocol    = "-1"
-      cidr_block  = "0.0.0.0/0"
+      cidr_block  = "10.0.0.0/16"
     },
   ]
 }
