@@ -1,20 +1,3 @@
-
-variable "public_outbound_acl_rules" {
-  description = "Public subnets outbound network ACLs"
-  type        = list(map(string))
-
-  default = [
-    {
-      rule_number = 100
-      rule_action = "allow"
-      from_port   = 0
-      to_port     = 0
-      protocol    = "-1"
-      cidr_block  = "10.0.0.0/16"
-    },
-  ]
-}
-
 variable "private_inbound_acl_rules" {
   description = "Private subnets inbound network ACLs"
   type        = list(map(string))
